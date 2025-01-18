@@ -4,6 +4,10 @@ const path = require('path');
 const axios = require('axios');
 const { handleMessage } = require('./handles/handleMessage');
 const { handlePostback } = require('./handles/handlePostback');
+const { v4: uuidv4 } = require('uuid'); // Import v4 explicitly
+const id = uuidv4(); // Generate a UUID
+console.log(id);
+
 
 const app = express();
 app.use(express.json());
